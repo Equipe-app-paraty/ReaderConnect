@@ -50,8 +50,8 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="block w-8 h-8 rounded-full overflow-hidden">
                 <Avatar>
-                  <AvatarImage src={user.profilePicture} alt={user.name} />
-                  <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
+                  <AvatarImage src={user.profilePicture || undefined} alt={user.username} />
+                  <AvatarFallback>{user.username.charAt(0).toUpperCase()}</AvatarFallback>
                 </Avatar>
               </Link>
             </div>
