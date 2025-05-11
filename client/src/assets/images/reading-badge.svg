@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#EFF6FF" cx="60" cy="60" r="60"></circle>
+        <circle fill="#DBEAFE" cx="60" cy="60" r="50"></circle>
+        <circle fill="#BFDBFE" cx="60" cy="60" r="40"></circle>
+        
+        <!-- Open Book -->
+        <g transform="translate(30, 40)">
+            <!-- Left Page -->
+            <path d="M30,0 L0,10 L0,50 L30,40 Z" fill="#FFFFFF"></path>
+            <!-- Right Page -->
+            <path d="M30,0 L60,10 L60,50 L30,40 Z" fill="#F8FAFC"></path>
+            <!-- Binding -->
+            <path d="M30,0 L30,40" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"></path>
+            <!-- Page Content Lines -->
+            <path d="M10,15 L25,10" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M10,20 L25,15" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M10,25 L25,20" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M10,30 L25,25" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M35,10 L50,15" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M35,15 L50,20" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M35,20 L50,25" stroke="#94A3B8" stroke-width="1"></path>
+            <path d="M35,25 L50,30" stroke="#94A3B8" stroke-width="1"></path>
+        </g>
+        
+        <!-- Star -->
+        <g transform="translate(50, 20)">
+            <path d="M10,0 L13,6 L20,7 L15,12 L16,19 L10,16 L4,19 L5,12 L0,7 L7,6 Z" fill="#F59E0B"></path>
+        </g>
+    </g>
+</svg>

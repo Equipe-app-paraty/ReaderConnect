@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.4"/>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="url(#bgGradient)" x="0" y="0" width="600" height="600"></rect>
+        
+        <!-- Circles -->
+        <circle fill="#6366F1" opacity="0.1" cx="100" cy="100" r="20"></circle>
+        <circle fill="#8B5CF6" opacity="0.1" cx="240" cy="120" r="30"></circle>
+        <circle fill="#10B981" opacity="0.1" cx="400" cy="80" r="25"></circle>
+        <circle fill="#F43F5E" opacity="0.1" cx="180" cy="250" r="15"></circle>
+        <circle fill="#3B82F6" opacity="0.1" cx="500" cy="200" r="35"></circle>
+        <circle fill="#F97316" opacity="0.1" cx="300" cy="400" r="28"></circle>
+        <circle fill="#6366F1" opacity="0.1" cx="420" cy="500" r="22"></circle>
+        <circle fill="#8B5CF6" opacity="0.1" cx="150" cy="450" r="32"></circle>
+        
+        <!-- Soft Lines -->
+        <path d="M50,50 Q150,150 250,50 T450,50" stroke="#6366F1" stroke-width="1" opacity="0.2"></path>
+        <path d="M50,150 Q150,250 250,150 T450,150" stroke="#F43F5E" stroke-width="1" opacity="0.2"></path>
+        <path d="M50,250 Q150,350 250,250 T450,250" stroke="#10B981" stroke-width="1" opacity="0.2"></path>
+        <path d="M50,350 Q150,450 250,350 T450,350" stroke="#3B82F6" stroke-width="1" opacity="0.2"></path>
+        <path d="M50,450 Q150,550 250,450 T450,450" stroke="#8B5CF6" stroke-width="1" opacity="0.2"></path>
+        
+        <!-- Book Icons -->
+        <g transform="translate(50, 500)">
+            <rect fill="#6366F1" opacity="0.2" x="0" y="0" width="20" height="30" rx="2"></rect>
+        </g>
+        <g transform="translate(500, 100)">
+            <rect fill="#F43F5E" opacity="0.2" x="0" y="0" width="20" height="30" rx="2"></rect>
+        </g>
+        <g transform="translate(400, 300)">
+            <rect fill="#10B981" opacity="0.2" x="0" y="0" width="20" height="30" rx="2"></rect>
+        </g>
+        <g transform="translate(100, 350)">
+            <rect fill="#3B82F6" opacity="0.2" x="0" y="0" width="20" height="30" rx="2"></rect>
+        </g>
+    </g>
+</svg>

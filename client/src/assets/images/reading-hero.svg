@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="400px" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect fill="#F8FAFC" x="0" y="0" width="500" height="400" rx="8"></rect>
+        
+        <!-- Person reading -->
+        <g transform="translate(150, 80)">
+            <!-- Chair -->
+            <rect fill="#E2E8F0" x="30" y="160" width="140" height="20" rx="5"></rect>
+            <rect fill="#CBD5E1" x="40" y="180" width="20" height="60" rx="2"></rect>
+            <rect fill="#CBD5E1" x="140" y="180" width="20" height="60" rx="2"></rect>
+            <rect fill="#94A3B8" x="55" y="160" width="90" height="8"></rect>
+            
+            <!-- Person -->
+            <ellipse fill="#6366F1" cx="100" cy="100" rx="50" ry="50" opacity="0.3"></ellipse>
+            
+            <!-- Head -->
+            <circle fill="#FDA4AF" cx="100" cy="80" r="25"></circle>
+            <!-- Hair -->
+            <path d="M75,70 C75,60 85,55 100,55 C115,55 125,60 125,70 C125,60 115,45 100,45 C85,45 75,60 75,70 Z" fill="#0F172A"></path>
+            
+            <!-- Body -->
+            <path d="M85,105 L115,105 L115,175 C115,180 110,185 100,185 C90,185 85,180 85,175 L85,105 Z" fill="#BFDBFE"></path>
+            
+            <!-- Arms -->
+            <path d="M85,105 L65,135 C60,140 60,145 65,150 L75,145 L90,120 L85,105 Z" fill="#BFDBFE"></path>
+            <path d="M115,105 L145,125 C150,128 150,133 145,135 L135,130 L120,115 L115,105 Z" fill="#BFDBFE"></path>
+            
+            <!-- Book -->
+            <rect fill="#475569" x="70" y="120" width="60" height="40" rx="2"></rect>
+            <path d="M100,120 L100,160" stroke="#94A3B8" stroke-width="2"></path>
+            <path d="M80,130 L90,130 M80,140 L90,140 M80,150 L90,150" stroke="#F1F5F9" stroke-width="2"></path>
+            <path d="M110,130 L120,130 M110,140 L120,140 M110,150 L120,150" stroke="#F1F5F9" stroke-width="2"></path>
+        </g>
+        
+        <!-- Books on shelf -->
+        <g transform="translate(50, 40)">
+            <!-- Shelf -->
+            <rect fill="#94A3B8" x="0" y="110" width="80" height="10" rx="2"></rect>
+            <rect fill="#64748B" x="5" y="120" width="10" height="30" rx="1"></rect>
+            <rect fill="#64748B" x="65" y="120" width="10" height="30" rx="1"></rect>
+            
+            <!-- Books -->
+            <rect fill="#F43F5E" x="10" y="60" width="10" height="50" rx="1"></rect>
+            <rect fill="#8B5CF6" x="20" y="70" width="8" height="40" rx="1"></rect>
+            <rect fill="#3B82F6" x="28" y="65" width="12" height="45" rx="1"></rect>
+            <rect fill="#10B981" x="40" y="75" width="7" height="35" rx="1"></rect>
+            <rect fill="#F59E0B" x="47" y="60" width="15" height="50" rx="1"></rect>
+            <rect fill="#6366F1" x="62" y="70" width="10" height="40" rx="1"></rect>
+        </g>
+        
+        <!-- Books on floor -->
+        <g transform="translate(350, 230)">
+            <rect fill="#F43F5E" x="0" y="0" width="40" height="15" rx="1"></rect>
+            <rect fill="#8B5CF6" x="5" y="15" width="30" height="12" rx="1"></rect>
+            <rect fill="#3B82F6" x="-5" y="27" width="45" height="18" rx="1"></rect>
+        </g>
+        
+        <!-- Plant -->
+        <g transform="translate(380, 80)">
+            <rect fill="#94A3B8" x="15" y="60" width="30" height="20" rx="2"></rect>
+            <path d="M30,60 C30,60 20,40 10,45 C0,50 10,60 10,60" fill="#22C55E"></path>
+            <path d="M30,60 C30,60 40,30 50,35 C60,40 50,60 50,60" fill="#22C55E"></path>
+            <path d="M30,60 C30,60 30,20 30,15 C30,10 40,10 40,15 C40,20 40,60 40,60" fill="#16A34A"></path>
+        </g>
+    </g>
+</svg>

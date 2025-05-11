@@ -18,9 +18,15 @@ export default function Header() {
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-serif font-bold text-primary-dark flex items-center">
-            <i className="ri-book-open-line mr-2 text-secondary"></i>
-            BookNook
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/src/assets/images/booknook-logo.svg" 
+              alt="BookNook Logo" 
+              className="h-10 mr-2" 
+            />
+            <span className="text-2xl font-serif font-bold text-primary-dark bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              BookNook
+            </span>
           </Link>
         </div>
         

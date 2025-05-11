@@ -81,16 +81,34 @@ export default function AuthPage() {
       
       <main className="flex-grow container mx-auto px-4 py-6">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="md:pr-8">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-primary-dark mb-4">
+          <div className="md:pr-8 relative">
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                backgroundImage: "url('/src/assets/images/auth-hero-pattern.svg')",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center"
+              }}
+            ></div>
+            <h1 className="text-3xl md:text-4xl font-serif font-bold text-primary-dark mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Your digital reading journey starts here
             </h1>
             <p className="text-lg text-primary-light mb-6">
               Track your reading progress, discover new books, and connect with fellow readers.
             </p>
-            <div className="space-y-4">
+            
+            <div className="my-8 flex justify-center">
+              <img 
+                src="/src/assets/images/reading-hero.svg" 
+                alt="Person reading" 
+                className="w-full max-w-sm rounded-lg shadow-md" 
+              />
+            </div>
+            
+            <div className="space-y-4 mt-8 bg-white bg-opacity-90 rounded-lg p-6 shadow-sm border border-neutral-light">
               <div className="flex items-center">
-                <div className="bg-neutral-lightest p-2 rounded-full mr-4">
+                <div className="bg-primary-light bg-opacity-20 p-2 rounded-full mr-4">
                   <i className="ri-book-mark-line text-xl text-secondary"></i>
                 </div>
                 <div>
@@ -99,7 +117,7 @@ export default function AuthPage() {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="bg-neutral-lightest p-2 rounded-full mr-4">
+                <div className="bg-primary-light bg-opacity-20 p-2 rounded-full mr-4">
                   <i className="ri-stack-line text-xl text-secondary"></i>
                 </div>
                 <div>
@@ -108,7 +126,7 @@ export default function AuthPage() {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="bg-neutral-lightest p-2 rounded-full mr-4">
+                <div className="bg-primary-light bg-opacity-20 p-2 rounded-full mr-4">
                   <i className="ri-user-heart-line text-xl text-secondary"></i>
                 </div>
                 <div>
