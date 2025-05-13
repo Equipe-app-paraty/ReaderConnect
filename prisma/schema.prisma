@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int        @id @default(autoincrement())
+  username       String     @unique
+  password       String
+  name           String
+  email          String     @unique
+  profilePicture String     @default("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100") @map("profile_picture")
+  userBooks      UserBook[]
+
+  @@map("users")
+}
+
+model Book {
+  id          Int        @id @default(autoincrement())
+  title       String
+  author      String
+  coverImage  String     @map("cover_image")
+  totalPages  Int        @map("total_pages")
+  description String?
+  rating      Int?
+  userBooks   UserBook[]
+
+  @@map("books")
+}
+
+model UserBook {
+  id            Int       @id @default(autoincrement())
+  userId        Int       @map("user_id")
+  bookId        Int       @map("book_id")
+  status        String    // "reading", "want_to_read", "completed"
+  currentPage   Int       @default(0) @map("current_page")
+  dateAdded     DateTime  @default(now()) @map("date_added")
+  dateCompleted DateTime? @map("date_completed")
+  user          User      @relation(fields: [userId], references: [id])
+  book          Book      @relation(fields: [bookId], references: [id])
+
+  @@map("user_books")
+}
