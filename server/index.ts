@@ -2,6 +2,16 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
+console.log("Iniciando servidor com configurações:", {
+  nodeEnv: process.env.NODE_ENV,
+  vercel: process.env.VERCEL,
+  databaseConnected: false, // pool variable is not defined, removing reference
+});
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -59,12 +69,8 @@ app.use((req, res, next) => {
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
+  const PORT = process.env.PORT || 5000;
+  server.listen(PORT, () => {
+    console.log(`[express] serving on port ${PORT}`);
   });
 })();
