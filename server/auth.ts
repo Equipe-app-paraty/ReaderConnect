@@ -29,15 +29,22 @@ async function comparePasswords(supplied: string, stored: string) {
 }
 
 export function setupAuth(app: Express) {
+  // Verificar se estamos no ambiente Vercel
+  const isVercel = process.env.VERCEL === "1";
+
   const sessionSettings: session.SessionOptions = {
     secret: process.env.SESSION_SECRET || "booknook-secret-key",
     resave: false,
     saveUninitialized: false,
-    store: storage.sessionStore,
+    // Use armazenamento de sessão apenas em ambiente não-Vercel
+    store: isVercel ? undefined : storage.sessionStore,
     cookie: {
       secure: process.env.NODE_ENV === "production",
       maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
-    }
+      // Adicionar configurações para melhorar segurança e compatibilidade
+      httpOnly: true,
+      sameSite: "lax",
+    },
   };
 
   app.set("trust proxy", 1);
@@ -57,11 +64,11 @@ export function setupAuth(app: Express) {
       } catch (error) {
         return done(error);
       }
-    }),
+    })
   );
 
   passport.serializeUser((user, done) => done(null, user.id));
-  
+
   passport.deserializeUser(async (id: number, done) => {
     try {
       const user = await storage.getUser(id);
@@ -103,7 +110,9 @@ export function setupAuth(app: Express) {
         return next(err);
       }
       if (!user) {
-        return res.status(401).json({ message: "Invalid username or password" });
+        return res
+          .status(401)
+          .json({ message: "Invalid username or password" });
       }
       req.login(user, (err) => {
         if (err) {
